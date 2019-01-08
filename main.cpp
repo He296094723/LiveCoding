@@ -2,7 +2,6 @@
 #include <QGuiApplication>
 #include <QQmlEngine>
 #include <QQuickView>
-#include <QString>
 #include <QUrl>
 
 int main(int argc, char *argv[]) {
