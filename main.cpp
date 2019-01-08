@@ -1,12 +1,11 @@
-#include <QGuiApplication>
-#include <QQuickView>
-#include <QUrl>
-#include <QQmlEngine>
-
 #include "filewatcher.h"
+#include <QGuiApplication>
+#include <QQmlEngine>
+#include <QQuickView>
+#include <QString>
+#include <QUrl>
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     QGuiApplication app(argc, argv);
 
     QQuickView view;
@@ -19,7 +18,7 @@ int main(int argc, char *argv[])
     view.setHeight(400);
     view.show();
 
-    FileWatcher watcher([&view, SOURCE_URL](){
+    FileWatcher watcher([&view, SOURCE_URL]() {
         view.engine()->clearComponentCache();
         view.setSource(SOURCE_URL);
     });
